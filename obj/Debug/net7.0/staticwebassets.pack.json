@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\css\\contratoCredito.css",
+      "PackagePath": "staticwebassets\\assets\\css\\contratoCredito.css"
+    },
+    {
+      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\html\\headerLogo.html",
+      "PackagePath": "staticwebassets\\assets\\html\\headerLogo.html"
+    },
+    {
+      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\html\\preImpresion.html",
+      "PackagePath": "staticwebassets\\assets\\html\\preImpresion.html"
+    },
+    {
+      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\img\\logo_contrato.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo_contrato.png"
+    },
+    {
+      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\img\\preimpresion.png",
+      "PackagePath": "staticwebassets\\assets\\img\\preimpresion.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.api-guardian.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.api-guardian.props",
+      "PackagePath": "build\\api-guardian.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.api-guardian.props",
+      "PackagePath": "buildMultiTargeting\\api-guardian.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.api-guardian.props",
+      "PackagePath": "buildTransitive\\api-guardian.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,284 @@
+@using System.Globalization;
+@using Microsoft.AspNetCore.Hosting;
+@model api_guardian.Models.Templates.ReporteConsolidados;
+@inject IWebHostEnvironment _webHostEnvironment;
+@{
+    //fecha actual del sistema
+    var dia = DateTime.Now.ToString("dd", new CultureInfo("es-ES"));
+    var mes = DateTime.Now.ToString("MMMM", new CultureInfo("es-ES"));
+    var año = DateTime.Now.ToString("yyyy", new CultureInfo("es-ES"));
+    //firma vendedor
+    var rutaFirma = System.IO.Path.Combine(
+    this._webHostEnvironment.WebRootPath,
+    "Img",
+    "Firmas",
+    "fcontrato_bolivia_esandagorda.png"
+    );
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> @Model.nombreReporte</title>
+    <!--link rel="stylesheet" href="~/ResourceDocs/Contratos/contratosCredito.css"-->
+    @* <style>
+    body {
+    font: Serif;
+    font-size: 19px;
+    text-rendering: geometricPrecision;
+    text-align: justify;
+    margin-top: 20px;
+    }
+
+    .centrado {
+    text-align: center;
+    font-size: 19px;
+    margin: 0px;
+    padding: 0px;
+    }
+
+    .titulo {
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+
+    p {
+    padding-bottom: 0px;
+    }
+
+    p.seguido {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+
+    .container {
+    text-align: center;
+    }
+
+    .left {
+    float: left;
+    background:blue;
+    }
+
+    .right {
+    float: right;
+    background:red;
+    }
+
+    .center {
+    background:green;display: inline-block
+    }
+    </style> *@
+    <style>
+        table {
+            page-break-inside: auto;
+            border-collapse: collapse;
+            width: 100%;
+            border-color: #33F2FF;
+        }
+
+        thead {
+            display: table-header-group;
+            background-color: #33F2FF;
+            border-color: #33F2FF;
+        }
+
+        th {
+            padding: 4px;
+            text-align: center;
+            border-color: #33F2FF;
+        }
+
+        td {
+            padding: 3px;
+            border-color: #33F2FF;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        body {
+            font-family: serif;
+            font-size: 10px;
+            text-rendering: geometricPrecision;
+            margin-top: 20px;
+        }
+
+        .centrado {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .titulo {
+            font-size: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .parrafo {
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h4 class="centrado titulo">
+        <strong>
+            @Model.nombreReporte
+        </strong>
+    </h4>
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td class="asc" colspan="3">
+                    <strong>Nit:</strong> @Model.nit
+                </td>
+                <td class="asc" colspan="3">
+                    <strong>Empresa:</strong> @Model.empresa
+                </td>
+            </tr>
+            <tr>
+                <td class="asc" colspan="3">
+                    <strong>Ciclo:</strong> @Model.ciclo
+                </td>
+                <td class="asc">
+                    <strong>Fecha inicio ciclo:</strong> @Model.fechaInicio.ToString("dd/mm/yyyy")
+                </td>
+                <td class="asc">
+                    <strong>Fecha fin ciclo:</strong> @Model.fechaFin.ToString("dd/mm/yyyy")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead class="padding">
+            <tr>
+                <th>
+                    Codigo
+                </th>
+                <th>
+                    Asesor
+                </th>
+                <th>
+                    Comision $US
+                </th>
+                <th>
+                    Servicio $US
+                </th>
+                <th>
+                    Total comision $US
+                </th>
+                <th>
+                    Impuesto $US
+                </th>
+                <th>
+                    Total menos <br> impuesto $US
+                </th>
+                <th>
+                    Retencion $US
+                </th>
+                <th>
+                    total retencion $US
+                </th>
+                <th>
+                    Total $US
+                </th>
+                <th>
+                    Total pagar $US
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var asesor in Model.asesores)
+            {
+                <tr>
+                    <td class="text-center">
+                        @asesor.codigo
+                    </td>
+                    <td class="text-left">
+                        @asesor.asesor
+                    </td>
+                    <td class="text-center">
+                        @asesor.comision
+                    </td>
+                    <td class="text-center">
+                        @asesor.servicio
+                    </td>
+                    <td class="text-center">
+                        @asesor.totalComision
+                    </td>
+                    <td class="text-center">
+                        @asesor.impuesto
+                    </td>
+                    <td class="text-center">
+                        @asesor.sinImpuesto
+                    </td>
+                    <td class="text-center">
+                        @asesor.retencion
+                    </td>
+                    <td class="text-center">
+                        @asesor.totalRetencion
+                    </td>
+                    <td class="text-center">
+                        @asesor.total
+                    </td>
+                    <td class="text-center">
+                        @asesor.totalPagar
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @* <p class="centrado">Santa Cruz de la sierra, @dia de @mes de @año.</p> *@
+    <div style="height: 130px;"></div>
+    <div class="left">
+        <div style="margin-right: 50px;">
+            <div style="text-align: center;">
+                <div style="width: 150px; height: 150px;"></div>
+            </div>
+            <div style="width: 390px;height: 90px;">
+
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div style="margin-left: 50px;">
+            <div style="text-align: center;">
+                @* @if (!@Model.Preview)
+                {
+                <img src="@rutaFirma" style="width: 150px; height: 150px;">
+                }
+                else
+                {
+                <div style="width: 150px; height: 150px;"></div>
+                } *@
+            </div>
+            <div style="width: 390px;height: 90px;">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

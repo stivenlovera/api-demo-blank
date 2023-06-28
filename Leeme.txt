@@ -1,0 +1,4 @@
+net core 7 herramientos para conetar con mysql
+
+//scanfolder
+dotnet ef dbcontext scaffold "Server=10.1.2.94;Port=3306;User=root;Password=123;Database=grdsion;" MySql.EntityFrameworkCore -o Entities -c DbContextGrdSion  -t administracionempresa  
