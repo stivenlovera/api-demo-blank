@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using api_guardian.Contexts;
 using api_guardian.Helpers;
 using api_guardian.Module.ConsolidadosModule;
+using api_guardian.SqlQuerys.GrdSion;
 using api_guardian.Utils;
 using DinkToPdf;
 using DinkToPdf.Contracts;
@@ -25,7 +26,7 @@ namespace api_guardian
         public void ConfigureServices(IServiceCollection services)
         {
             var getStringConnectionMysql = configuration.GetSection("connectionMysql").Get<ConectionString>();
-            var mysqlConnect = $"Server={getStringConnectionMysql.IpServer};Port={getStringConnectionMysql.Port};Database={getStringConnectionMysql.Database};User={getStringConnectionMysql.User};Password={getStringConnectionMysql.Password};";
+            var mysqlConnect = $"Server={getStringConnectionMysql.IpServer};Port={getStringConnectionMysql.Port};Database={getStringConnectionMysql.Database};User={getStringConnectionMysql.User};Password={getStringConnectionMysql.Password};Connection Timeout=0;default command timeout=0;";
 
             services.AddCors(options =>
             {
@@ -43,6 +44,8 @@ namespace api_guardian
 
             this.ServicesUtils(services);
             this.ServicesModulos(services);
+            this.ServicesSql(services);
+
             services.AddControllers();
             //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddEndpointsApiExplorer();
@@ -117,7 +120,14 @@ namespace api_guardian
         private void ServicesModulos(IServiceCollection services)
         {
             //CONSOLIDADOS
-            services.AddTransient<ConsolidadosReports>();
+            services.AddTransient<ConsolidadoModule>();
+            services.AddTransient<ConsolidadosReportsModule>();
+
+        }
+        private void ServicesSql(IServiceCollection services)
+        {
+            //CONSOLIDADOS
+            services.AddTransient<ConsolidadoSql>();
 
         }
     }

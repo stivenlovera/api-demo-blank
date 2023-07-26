@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>516</y>
+      <w>408</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>autorizacion_guardian (login)
+--
+autorizacionGuardianId
+usuarioGuardian
+passwordGuardian
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>540</y>
+      <w>408</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>modulos_guardian
+--
+modulosGuardianId
+url
+modulo
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1440</x>
+      <y>552</y>
+      <w>408</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>funcionalidad_guardian
+--
+funcionalidadGuardianId
+modulosGuardianId
+url
+modulo
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>612</y>
+      <w>732</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=n
+accede</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;580.0;120.0;580.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>588</y>
+      <w>276</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=1
+accede</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>156</y>
+      <w>408</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>token_activo_guardian
+--
+tokenActivoGuardianId
+token
+autorizacionGuardianId
+horaIniciada
+estado
+browserName
+browserVersion
+osName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>168</y>
+      <w>408</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>historial_autorizacion_guardian
+--
+historial_autorizacion_guardianId
+token
+autorizacionGuardianId
+horaIniciada
+horaFinalizada
+browserName
+browserVersion
+osName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>348</y>
+      <w>264</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+token activo (vacio y maximo 1)</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>60</y>
+      <w>408</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=.
+solo de haber un registro por autorizacion guardian
+(usuario) este pasara al historial 
+y se eliminar de esta tabla
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>360</y>
+      <w>456</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+historial de token usados</panel_attributes>
+    <additional_attributes>10.0;170.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>240</y>
+      <w>204</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>816</y>
+      <w>312</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>modulos_autorizacion_guardian
+--
+modulosGuardianId
+autorizacionGuardianId</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>636</x>
+      <y>744</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>768</x>
+      <y>504</y>
+      <w>456</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>por navegacion desde menu
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1416</x>
+      <y>516</y>
+      <w>456</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>por funcionalidad añadir, modificar, eliminar
+--
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>1008</y>
+      <w>312</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>autorizacion_guardian_bitacora
+--
+autorizacionGuardianId
+PrimaryKey
+fecha
+descripcion
+detalle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>612</y>
+      <w>216</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+historial de token usados</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;330.0</additional_attributes>
+  </element>
+</diagram>

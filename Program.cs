@@ -12,10 +12,11 @@ JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 builder.Host.UseSerilog();
 //CREATE LOGS
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
+    .MinimumLevel.Override("Microsoft.EntityFrameworkCore.Database.Command", Serilog.Events.LogEventLevel.Error)
+    .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Debug)
     .Enrich.FromLogContext()
     .WriteTo.Console()
-    .WriteTo.File("Logs/Log-.log", Serilog.Events.LogEventLevel.Warning, rollingInterval: RollingInterval.Day, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u15}] {Message:lj}{NewLine}{Exception}")
+    .WriteTo.File("Logs/Log-.log", Serilog.Events.LogEventLevel.Information, rollingInterval: RollingInterval.Day, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u15}] {Message:lj}{NewLine}{Exception}")
     .CreateLogger();
 // Add services to the container.
 var startup = new Startup(builder.Configuration);
@@ -50,7 +51,7 @@ startup.Configure(app, app.Environment);
 
 try
 {
-    Log.Warning("Iniciando Web API");
+    Log.Information("Iniciando Web API");
     app.Run();
 }
 catch (Exception ex)

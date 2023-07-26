@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_guardian.Contexts
 {
-    public class dBContextResidual : DbContext
+    public class DBContextResidual : DbContext
     {
-        public dBContextResidual(DbContextOptions<dBContextResidual> options) : base(options)
+        public DBContextResidual(DbContextOptions<DBContextResidual> options) : base(options)
         {
 
         }

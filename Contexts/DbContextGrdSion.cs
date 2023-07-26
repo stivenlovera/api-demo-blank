@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api_guardian.Entities;
+using api_guardian.Entities.GrdSion.Views;
 using Microsoft.EntityFrameworkCore;
 
 namespace api_guardian.Contexts
@@ -14,5 +15,6 @@ namespace api_guardian.Contexts
 
         }
         public virtual DbSet<Administracionempresa> Administracionempresas { get; set; }
+        public virtual DbSet<ObtenerConsolidadoView> ObtenerConsolidadoViews { get; set; }
     }
 }

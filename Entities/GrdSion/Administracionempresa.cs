@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace api_guardian.Entities;
 
@@ -12,7 +13,7 @@ public partial class Administracionempresa
     public string Susuariomod { get; set; }
 
     public DateTime Dtfechamod { get; set; }
-
+    [Key]
     public int LempresaId { get; set; }
 
     public string Snombre { get; set; }

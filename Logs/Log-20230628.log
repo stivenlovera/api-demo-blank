@@ -1,270 +1,35 @@
-2023-06-28 09:19:50 [WARNING] Iniciando Web API
-2023-06-28 09:20:27 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 09:21:25 [WARNING] Iniciando Web API
-2023-06-28 09:35:57 [WARNING] Iniciando Web API
-2023-06-28 09:37:05 [WARNING] Iniciando Web API
-2023-06-28 09:37:27 [WARNING] Iniciando Web API
-2023-06-28 09:37:54 [WARNING] Iniciando Web API
-2023-06-28 09:40:04 [WARNING] Iniciando Web API
-2023-06-28 09:57:35 [WARNING] Iniciando Web API
-2023-06-28 10:13:30 [WARNING] Iniciando Web API
-2023-06-28 10:13:44 [WARNING] Iniciando Web API
-2023-06-28 10:23:33 [WARNING] Iniciando Web API
-2023-06-28 10:25:44 [WARNING] Iniciando Web API
-2023-06-28 10:28:27 [WARNING] Iniciando Web API
-2023-06-28 10:29:54 [WARNING] Iniciando Web API
-2023-06-28 10:31:14 [WARNING] Iniciando Web API
-2023-06-28 11:12:23 [WARNING] Iniciando Web API
-2023-06-28 11:39:27 [WARNING] Iniciando Web API
-2023-06-28 11:39:33 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 11:39:47 [WARNING] Iniciando Web API
-2023-06-28 11:39:52 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 11:41:43 [ERROR] An unhandled exception has occurred while executing the request.
-System.MissingMethodException: Attempted to access a missing method.
-   at api_guardian.Controllers.ResportConsolidadoController..ctor(ILogger`1 logger)
-   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-2023-06-28 11:42:16 [ERROR] An unhandled exception has occurred while executing the request.
-System.MissingMethodException: Attempted to access a missing method.
-   at api_guardian.Controllers.ResportConsolidadoController..ctor(ILogger`1 logger)
-   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-2023-06-28 11:42:18 [ERROR] An unhandled exception has occurred while executing the request.
-System.MissingMethodException: Attempted to access a missing method.
-   at api_guardian.Controllers.ResportConsolidadoController..ctor(ILogger`1 logger)
-   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-2023-06-28 11:43:21 [ERROR] An unhandled exception has occurred while executing the request.
-System.MissingMethodException: Attempted to access a missing method.
-   at api_guardian.Controllers.ResportConsolidadoController..ctor(ILogger`1 logger)
-   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
-   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
-   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
---- End of stack trace from previous location ---
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
-   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
-   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
-   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
-   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
-   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-2023-06-28 11:47:10 [WARNING] Iniciando Web API
-2023-06-28 11:47:15 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 11:47:15 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 11:47:17 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 11:48:54 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 11:48:54 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 11:49:15 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 11:49:16 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 11:49:58 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 11:49:58 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 11:54:02 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 11:54:03 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 11:58:04 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 11:58:05 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:06:06 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:06:07 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:08:28 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:08:28 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:08:39 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:08:39 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:08:49 [WARNING] Iniciando Web API
-2023-06-28 12:08:51 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 12:08:51 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:08:51 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:12:38 [WARNING] Iniciando Web API
-2023-06-28 12:12:54 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 12:12:54 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:12:54 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:13:18 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:13:18 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:13:25 [WARNING] Iniciando Web API
-2023-06-28 12:13:26 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 12:13:26 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:13:26 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:13:37 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:13:38 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:14:05 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:14:05 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:14:10 [WARNING] Iniciando Web API
-2023-06-28 12:14:12 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 12:14:12 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:14:12 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:14:20 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:14:21 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 12:14:26 [WARNING] Iniciando Web API
-2023-06-28 12:14:28 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 12:14:28 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 12:14:29 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:01:27 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:01:28 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:03:59 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:03:59 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:04:11 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:04:11 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:04:51 [WARNING] Iniciando Web API
-2023-06-28 13:04:53 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 13:04:54 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:04:54 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:05:14 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:05:15 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:06:21 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:06:22 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:08:49 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:08:49 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:09:37 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:09:37 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:10:33 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:10:34 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:11:58 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:11:59 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:12:41 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:12:42 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:13:20 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:13:21 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:13:52 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:13:53 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:14:59 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:15:00 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:15:32 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:15:33 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:15:49 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:15:50 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:16:19 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:16:19 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:16:32 [WARNING] Iniciando Web API
-2023-06-28 13:17:05 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 13:17:05 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:17:06 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:18:21 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:18:22 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:18:45 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:18:46 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:19:07 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:19:08 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:19:17 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:19:18 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:19:28 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:19:28 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:20:15 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:20:16 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:21:36 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:21:36 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:21:53 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:21:54 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:22:07 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:22:07 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:22:24 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:22:25 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:22:38 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:22:39 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:23:59 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:24:00 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:24:17 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:24:18 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:24:26 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:24:26 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:25:04 [WARNING] Iniciando Web API
-2023-06-28 13:27:06 [WARNING] Iniciando Web API
-2023-06-28 13:27:33 [WARNING] Failed to determine the https port for redirect.
-2023-06-28 13:27:33 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:27:33 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:39:54 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:39:55 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:40:20 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:40:20 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:41:14 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:41:15 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:41:40 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:41:41 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:42:50 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:42:51 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:43:16 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:43:16 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:44:11 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:44:12 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:45:04 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:45:05 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:45:25 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:45:25 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:45:47 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:45:48 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:49:24 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:49:25 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:49:27 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:49:28 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:49:48 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:49:49 [WARNING] Converters/ConverterToPdf(demo) convertido
-2023-06-28 13:50:10 [WARNING] GetTemplate/ObtenerTemplateConsolidados Template a usar /Template/Reports/consolidados/reportConsolidados.cshtml Iniciando...
-2023-06-28 13:50:10 [WARNING] Converters/ConverterToPdf(demo) convertido
+2023-06-28 17:07:31 [INFORMATION] User profile is available. Using 'C:\Users\alovera\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-28 17:07:31 [INFORMATION] Iniciando Web API
+2023-06-28 17:07:31 [INFORMATION] Now listening on: http://localhost:5292
+2023-06-28 17:07:31 [INFORMATION] Application started. Press Ctrl+C to shut down.
+2023-06-28 17:07:31 [INFORMATION] Hosting environment: Development
+2023-06-28 17:07:31 [INFORMATION] Content root path: E:\STIVEN\GUARDIAN\api-guardian
+2023-06-28 17:07:31 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/swagger/index.html - -
+2023-06-28 17:07:31 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/swagger/index.html - - - 200 - text/html;charset=utf-8 137.6859ms
+2023-06-28 17:07:31 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - -
+2023-06-28 17:07:31 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 4.2351ms
+2023-06-28 17:07:32 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - -
+2023-06-28 17:07:32 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.2004ms
+2023-06-28 17:07:35 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/api/consolidado - -
+2023-06-28 17:07:35 [WARNING] Failed to determine the https port for redirect.
+2023-06-28 17:07:35 [INFORMATION] Executing endpoint 'api_guardian.Controllers.ReportConsolidadoController.Index (api-guardian)'
+2023-06-28 17:07:35 [INFORMATION] Route matched with {action = "Index", controller = "ReportConsolidado"}. Executing controller action with signature System.Threading.Tasks.Task`1[api_guardian.Dtos.Resquest.ResponseDto`1[api_guardian.Dtos.Module.ConsolidadoModuleDto]] Index() on controller api_guardian.Controllers.ReportConsolidadoController (api-guardian).
+2023-06-28 17:07:36 [INFORMATION] ConsolidadoModule/Index() => iniciando...
+2023-06-28 17:07:36 [INFORMATION] ConsolidadoModule/obtenerConsolidado() => 424 registros encontrados 
+2023-06-28 17:07:36 [INFORMATION] ResportConsolidadoController/Index() => RESPONSE: /n {
+  "status": 1,
+  "message": "mostrando data",
+  "data": {
+    "cicloActual": "Junio"
+  }
+} 
+2023-06-28 17:07:36 [INFORMATION] Executing ObjectResult, writing value of type 'api_guardian.Dtos.Resquest.ResponseDto`1[[api_guardian.Dtos.Module.ConsolidadoModuleDto, api-guardian, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-28 17:07:36 [INFORMATION] Executed action api_guardian.Controllers.ReportConsolidadoController.Index (api-guardian) in 1098.1056ms
+2023-06-28 17:07:36 [INFORMATION] Executed endpoint 'api_guardian.Controllers.ReportConsolidadoController.Index (api-guardian)'
+2023-06-28 17:07:36 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/api/consolidado - - - 200 - application/json;+charset=utf-8 1262.8089ms
+2023-06-28 17:08:36 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/swagger/index.html - -
+2023-06-28 17:08:36 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/swagger/index.html - - - 200 - text/html;charset=utf-8 9.6928ms
+2023-06-28 17:08:36 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - -
+2023-06-28 17:08:36 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 1.0626ms
+2023-06-28 17:08:36 [INFORMATION] Request starting HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - -
+2023-06-28 17:08:36 [INFORMATION] Request finished HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 9.7980ms
