@@ -35,10 +35,10 @@ namespace api_guardian.Module.ConsolidadosModule
             this._dbContextGrdSion = dbContextGrdSion;
             this._consolidadoSql = consolidadoSql;
         }
-        public async Task<FileStreamResult> ReportePorEmpresa()
+        public FileStreamResult ReportePorEmpresa()
         {
-            var sql = this._consolidadoSql.obtenerConsolidado(107);
-            var obtenerConsolidado = await this._dbContextGrdSion.ObtenerConsolidadoViews.FromSqlRaw(sql).ToListAsync();
+            //var sql = this._consolidadoSql.obtenerConsolidado(107);
+            //var obtenerConsolidado = await this._dbContextGrdSion.ObtenerConsolidadoViews.FromSqlRaw(sql).ToListAsync();
             var dataAsesores = new List<Asesor>();
             dataAsesores.Add(new Asesor
             {
@@ -78,10 +78,57 @@ namespace api_guardian.Module.ConsolidadosModule
                 fechaInicio = DateTime.Now,
                 nit = 250000089
             };
-            var htmlContent = this._getTemplate.GetTemplateReporteConsolidado(data);
+            var htmlContent = this._getTemplate.SearchTemplate("consolidado", data);
 
-            var pdf = this._generatePdf.Generate(htmlContent, "xxxx-xxxx-xxxx", true);
+            var pdf = this._generatePdf.Generate(htmlContent, "");
             return _converters.ConverterToPdf(pdf, "demo");
+        }
+        public byte[] ReportePorEmpresaBase64()
+        {
+            
+            var dataAsesores = new List<Asesor>();
+            dataAsesores.Add(new Asesor
+            {
+                asesor = "stiven lovera",
+                codigo = 25566,
+                comision = 522.66m,
+                impuesto = 52.66m,
+                sinImpuesto = 96.52m,
+                retencion = 70.66m,
+                servicio = 87.66m,
+                total = 100.00m,
+                totalComision = 568.85m,
+                totalPagar = 568.85m,
+                totalRetencion = 568.85m,
+            });
+            dataAsesores.Add(new Asesor
+            {
+                asesor = "Juan Jose",
+                codigo = 88999,
+                comision = 522.66m,
+                impuesto = 52.66m,
+                sinImpuesto = 96.52m,
+                retencion = 70.66m,
+                servicio = 87.66m,
+                total = 100.00m,
+                totalComision = 568.85m,
+                totalPagar = 568.85m,
+                totalRetencion = 568.85m,
+            });
+            var data = new ReporteConsolidados
+            {
+                nombreReporte = "REPORTE CONSOLIDADO COMISION - SERVICIO",
+                ciclo = "junio",
+                asesores = dataAsesores,
+                empresa = "Zuriel",
+                fechaFin = DateTime.Now,
+                fechaInicio = DateTime.Now,
+                nit = 250000089
+            };
+            var htmlContent = this._getTemplate.SearchTemplate("consolidado", data);
+
+            var pdf = this._generatePdf.Generate(htmlContent, "xxxx-xxxx-xxxx", false);
+            return pdf;
         }
     }
 }

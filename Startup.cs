@@ -1,16 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 using api_guardian.Contexts;
 using api_guardian.Helpers;
+using api_guardian.Module;
 using api_guardian.Module.ConsolidadosModule;
+using api_guardian.Module.JobsModule;
+using api_guardian.Repository;
+using api_guardian.Repository.BDComisiones;
+using api_guardian.Repository.BDGrdSion;
 using api_guardian.SqlQuerys.GrdSion;
 using api_guardian.Utils;
 using DinkToPdf;
 using DinkToPdf.Contracts;
 using DocumentoVentaSion.Utils;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 namespace api_guardian
@@ -19,7 +23,9 @@ namespace api_guardian
     {
         private readonly IConfiguration configuration;
 
-        public Startup(IConfiguration configuration)
+        public Startup(
+            IConfiguration configuration
+            )
         {
             this.configuration = configuration;
         }
@@ -27,7 +33,41 @@ namespace api_guardian
         {
             var getStringConnectionMysql = configuration.GetSection("connectionMysql").Get<ConectionString>();
             var mysqlConnect = $"Server={getStringConnectionMysql.IpServer};Port={getStringConnectionMysql.Port};Database={getStringConnectionMysql.Database};User={getStringConnectionMysql.User};Password={getStringConnectionMysql.Password};Connection Timeout=0;default command timeout=0;";
+            var getStringConnectionGuardian = configuration.GetSection("connectionMysqlGuardian").Get<ConectionString>();
+            var mysqlConnectGuardian = $"Server={getStringConnectionGuardian.IpServer};Port={getStringConnectionGuardian.Port};Database={getStringConnectionGuardian.Database};User={getStringConnectionGuardian.User};Password={getStringConnectionGuardian.Password};Connection Timeout=0;default command timeout=0;";
 
+            //DAPPER CONEXION
+            services.AddSingleton<DBGuardianContext>();
+            services.AddSingleton<DBGrdSionContext>();
+            services.AddSingleton<DBProyeccionContext>();
+            services.AddSingleton<DBComisionesContext>();
+
+
+            services.AddDbContext<DbContextGrdSion>(options =>
+            {
+                options.UseMySql(mysqlConnect, new MySqlServerVersion(new Version(5, 5, 2)));
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            }, ServiceLifetime.Transient
+            );
+
+            services.AddDbContext<DbContextGuardian>(options =>
+            {
+                options.UseMySql(mysqlConnectGuardian, ServerVersion.AutoDetect(mysqlConnectGuardian));
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            },
+                ServiceLifetime.Transient
+            );
+
+            ConnectDBComisiones(services);
+
+            ServicesUtils(services);
+            ServicesModulos(services);
+            ServicesSql(services);
+            ServicesRespositories(services);
+
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddAuthorization();
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "mypolicy",
@@ -36,20 +76,6 @@ namespace api_guardian
                         builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                     });
             });
-            services.AddDbContext<DbContextGrdSion>(options =>
-            {
-                options.UseMySql(mysqlConnect, ServerVersion.AutoDetect(mysqlConnect));
-                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-            }, ServiceLifetime.Transient);
-
-            this.ServicesUtils(services);
-            this.ServicesModulos(services);
-            this.ServicesSql(services);
-
-            services.AddControllers();
-            //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            services.AddEndpointsApiExplorer();
-            services.AddAuthorization();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -57,6 +83,7 @@ namespace api_guardian
                     Title = "API GUARDIAN",
                     Version = "v1"
                 });
+
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
@@ -81,13 +108,32 @@ namespace api_guardian
                   }
               });
             });
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(configuration.GetSection("KeyTokken").Value)
+                ),
+                ClockSkew = TimeSpan.Zero
+            });
+
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (!env.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(
+                    c =>
+                    {
+                        c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+                        c.InjectStylesheet("/swagger/custom.css");
+                    }
+                );
             }
             else //use en produccion - ambiente de desarrollo
             {
@@ -98,13 +144,20 @@ namespace api_guardian
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseCors(
+               options =>
+               {
+                   options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("Authorization");
+               }
+            );
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
         }
-        private void ServicesUtils(IServiceCollection services)
+        private static void ServicesUtils(IServiceCollection services)
         {
             //convert to pdf
             services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
@@ -117,18 +170,66 @@ namespace api_guardian
             /* services.AddTransient<FilesConvert>();
             services.AddTransient<Letras>(); */
         }
-        private void ServicesModulos(IServiceCollection services)
+        private static void ServicesModulos(IServiceCollection services)
         {
             //CONSOLIDADOS
             services.AddTransient<ConsolidadoModule>();
             services.AddTransient<ConsolidadosReportsModule>();
-
+            services.AddTransient<JobModule>();
+            services.AddTransient<JobTimeModulo>();
+            services.AddTransient<FuncionarioModule>();
+            services.AddTransient<AutorizadoModule>();
+            services.AddTransient<RolModule>();
+            services.AddTransient<RolFuncionarioModule>();
+            services.AddTransient<ReporteRedModule>();
+            services.AddTransient<AdministracionCicloModule>();
+            services.AddTransient<ModuloModule>();
+            services.AddTransient<AuthenticateModule>();
+            services.AddTransient<CicloModule>();
+            services.AddTransient<ProyeccionModule>();
+            services.AddTransient<AdministracionEmpresaModule>();
+            
         }
-        private void ServicesSql(IServiceCollection services)
+        private static void ServicesRespositories(IServiceCollection services)
+        {
+            //CONSOLIDADOS
+            services.AddTransient<ServicioRespository>();
+            services.AddTransient<JobTimeRepository>();
+            services.AddTransient<FuncionarioRepository>();
+            services.AddTransient<AutorizadoRepository>();
+            services.AddTransient<RolRepository>();
+            services.AddTransient<RolFuncionarioRepository>();
+            services.AddTransient<ReporteRedRepository>();
+            services.AddTransient<AdministracionContactoRepository>();
+            services.AddTransient<AdministracionCicloRepository>();
+            services.AddTransient<ModuloRespository>();
+            services.AddTransient<RolModuloRepository>();
+            services.AddTransient<RolSubModuloRepository>();
+            services.AddTransient<RolComponenteRepository>();
+            services.AddTransient<CicloRepository>();
+            services.AddTransient<ProyeccionRepository>();
+            services.AddTransient<CnxBdComsionesRepository>();
+            services.AddTransient<InCoutaRespository>();
+            services.AddTransient<AdministracionEmpresaRepository>();
+            services.AddTransient<ConsolidadoRepository>();
+        }
+        private static void ServicesSql(IServiceCollection services)
         {
             //CONSOLIDADOS
             services.AddTransient<ConsolidadoSql>();
+        }
 
+        private void ConnectDBComisiones(IServiceCollection services)
+        {
+            var getStringConnection = this.configuration.GetSection("connectionSqlServerDBComisiones").Get<ConectionString>();
+            var sqlServerConnectDBComisiones = $"Server={getStringConnection.IpServer};Database={getStringConnection.Database};User={getStringConnection.User};Password={getStringConnection.Password};TrustServerCertificate=True;";
+            services.AddDbContext<DbContextDBComisiones>(options =>
+            {
+                options.UseSqlServer(sqlServerConnectDBComisiones);
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            },
+                ServiceLifetime.Transient
+            );
         }
     }
 }

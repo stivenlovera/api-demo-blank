@@ -7,10 +7,11 @@ namespace api_guardian.Models.Utils
 {
     public class TemplateDocuments
     {
-        public Reportes Reportes { get; set; }
+        public List<Reportes> Reportes { get; set; }
     }
     public class Reportes
     {
-        public string Consolidados { get; set; }
+        public string Nombre { get; set; }
+        public string Path { get; set; }
     }
 }

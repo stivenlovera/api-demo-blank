@@ -22,13 +22,13 @@ namespace api_guardian.Utils
             this._configuration = configuration;
             this._razorRendererHelper = razorRendererHelper;
         }
-        public string GetTemplateReporteConsolidado<TModel>(TModel dataTemplate)
+        public string SearchTemplate<TModel>(string template, TModel dataTemplate)
         {
-
-            var templates = this._configuration.GetSection("Templates").Get<TemplateDocuments>();
-            this._logger.LogWarning($"GetTemplate/ObtenerTemplateConsolidados Template a usar {templates.Reportes.Consolidados} Iniciando...");
-            var plantilla = _razorRendererHelper.RenderPartialToString(templates.Reportes.Consolidados, dataTemplate);
-            return plantilla;
+            var listaTemplate = this._configuration.GetSection("Templates").Get<TemplateDocuments>();
+            var plantilla = listaTemplate.Reportes.Where(x => x.Nombre == template).FirstOrDefault();
+            this._logger.LogWarning("GetTemplate/SearchTemplate({template}) Template a usar {plantilla} Iniciando...", template, Helper.Log(plantilla));
+            var data = _razorRendererHelper.RenderPartialToString(plantilla.Path, dataTemplate);
+            return data;
         }
     }
 }

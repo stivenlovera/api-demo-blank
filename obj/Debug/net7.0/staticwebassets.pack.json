@@ -1,40 +1,740 @@
 {
   "Files": [
     {
-      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\css\\contratoCredito.css",
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\assets\\css\\contratoCredito.css",
       "PackagePath": "staticwebassets\\assets\\css\\contratoCredito.css"
     },
     {
-      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\html\\headerLogo.html",
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\assets\\html\\headerLogo.html",
       "PackagePath": "staticwebassets\\assets\\html\\headerLogo.html"
     },
     {
-      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\html\\preImpresion.html",
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\assets\\html\\preImpresion.html",
       "PackagePath": "staticwebassets\\assets\\html\\preImpresion.html"
     },
     {
-      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\img\\logo_contrato.png",
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\assets\\img\\logo_contrato.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo_contrato.png"
     },
     {
-      "Id": "E:\\STIVEN\\GUARDIAN\\api-guardian\\wwwroot\\assets\\img\\preimpresion.png",
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\assets\\img\\preimpresion.png",
       "PackagePath": "staticwebassets\\assets\\img\\preimpresion.png"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.api-guardian.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\10.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\1019.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\1019.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\10486.png",
+      "PackagePath": "staticwebassets\\images\\profile\\10486.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\11294.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\11294.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\12899.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\12899.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\13022.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\13022.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\15804.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\15804.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\17110.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\17110.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\17110.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\17110.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\17681.png",
+      "PackagePath": "staticwebassets\\images\\profile\\17681.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\181.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\181.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\21.png",
+      "PackagePath": "staticwebassets\\images\\profile\\21.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\2107.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\2107.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\23189.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\23189.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\2540.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\2540.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\28100.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\28100.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\31018.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\31018.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\33027.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\33027.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\33450.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\33450.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\34804.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\34804.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\3496.png",
+      "PackagePath": "staticwebassets\\images\\profile\\3496.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\35332.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\35332.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\35691.png",
+      "PackagePath": "staticwebassets\\images\\profile\\35691.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\36887.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\36887.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\37688.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\37688.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\37784.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\37784.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\38389.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\38389.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\38459.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\38459.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\40550.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\40550.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\40699.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\40699.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\41623.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\41623.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\42375.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\42375.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\42507.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\42507.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\43171.JPG",
+      "PackagePath": "staticwebassets\\images\\profile\\43171.JPG"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\44365.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\44365.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\44954.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\44954.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\44982.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\44982.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\45709.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\45709.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\45764.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\45764.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\46039.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\46039.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\46664.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\46664.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\47104.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\47104.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\48824.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\48824.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\51245.png",
+      "PackagePath": "staticwebassets\\images\\profile\\51245.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\51545.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\51545.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\51617.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\51617.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\51815.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\51815.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\52159.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\52159.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\52159.png",
+      "PackagePath": "staticwebassets\\images\\profile\\52159.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\52185.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\52185.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\53137.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\53137.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\5497.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\5497.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\60539.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\60539.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\61611.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\61611.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\61748.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\61748.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\65475.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\65475.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\65585.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\65585.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\65782.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\65782.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\66440.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\66440.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\67003.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\67003.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\67134.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\67134.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\6719.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\6719.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\68925.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\68925.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\69030.png",
+      "PackagePath": "staticwebassets\\images\\profile\\69030.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\69401.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\69401.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\69563.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\69563.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\70065.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\70065.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\71227.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\71227.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\71949.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\71949.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\72736.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\72736.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\73746.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\73746.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\73747.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\73747.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\74019.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\74019.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\74038.png",
+      "PackagePath": "staticwebassets\\images\\profile\\74038.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\74402.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\74402.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\74633.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\74633.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\74755.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\74755.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\75645.JPG",
+      "PackagePath": "staticwebassets\\images\\profile\\75645.JPG"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\76129.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\76129.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\76308.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\76308.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\76579.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\76579.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\76605.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\76605.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\76697.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\76697.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\77072.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\77072.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\77083.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\77083.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\77346.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\77346.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\77660.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\77660.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\77962.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\77962.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\78393.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\78393.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\78468.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\78468.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\78786.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\78786.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\78928.png",
+      "PackagePath": "staticwebassets\\images\\profile\\78928.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\78993.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\78993.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79039.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79039.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79095.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79095.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79124.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\79124.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79175.png",
+      "PackagePath": "staticwebassets\\images\\profile\\79175.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79191.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79191.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79226.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\79226.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79226.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79226.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79252.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79252.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79297.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79297.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79384.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79384.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79487.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79487.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79947.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79947.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\79964.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\79964.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80006.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\80006.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80154.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80154.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80190.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80190.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80254.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80254.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80472.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80472.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80499.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80499.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80525.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80525.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80736.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80736.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\80750.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\80750.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81033.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81033.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81098.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81098.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81151.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81151.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81190.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81190.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81219.JPG",
+      "PackagePath": "staticwebassets\\images\\profile\\81219.JPG"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81304.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81304.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81722.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81722.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\81777.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\81777.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\82005.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\82005.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\82212.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\82212.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\82453.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\82453.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\82749.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\82749.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\82901.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\82901.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83056.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83056.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83237.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83237.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83362.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83362.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83659.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83659.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83836.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83836.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83903.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83903.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\83934.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\83934.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84.JPG",
+      "PackagePath": "staticwebassets\\images\\profile\\84.JPG"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84110.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84110.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84144.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84144.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84189.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84189.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84189.png",
+      "PackagePath": "staticwebassets\\images\\profile\\84189.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84192.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84192.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84553.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84553.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\8466.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\8466.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84734.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84734.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84837.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84837.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84896.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84896.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84932.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\84932.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\84999.png",
+      "PackagePath": "staticwebassets\\images\\profile\\84999.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\85608.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\85608.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\85845.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\85845.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\86390.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\86390.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\86414.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\86414.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\86637.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\86637.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\86715.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\86715.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\86760.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\86760.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\86810.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\86810.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87060.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\87060.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87065.JPG",
+      "PackagePath": "staticwebassets\\images\\profile\\87065.JPG"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87308.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\87308.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87325.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\87325.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87357.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\87357.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87513.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\87513.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\87919.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\87919.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\88036.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\88036.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\88044.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\88044.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\88397.jpeg",
+      "PackagePath": "staticwebassets\\images\\profile\\88397.jpeg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\89236.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\89236.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\89426.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\89426.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\89453.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\89453.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\89808.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\89808.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\95.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\95.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\9623.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\9623.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\9855.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\9855.jpg"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\images\\profile\\blank.png",
+      "PackagePath": "staticwebassets\\images\\profile\\blank.png"
+    },
+    {
+      "Id": "E:\\SION\\api_guardian\\wwwroot\\template\\consolidado\\template_consolidado.xlsx",
+      "PackagePath": "staticwebassets\\template\\consolidado\\template_consolidado.xlsx"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.api_guardian.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.api-guardian.props",
-      "PackagePath": "build\\api-guardian.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.api_guardian.props",
+      "PackagePath": "build\\api_guardian.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.api-guardian.props",
-      "PackagePath": "buildMultiTargeting\\api-guardian.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.api_guardian.props",
+      "PackagePath": "buildMultiTargeting\\api_guardian.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.api-guardian.props",
-      "PackagePath": "buildTransitive\\api-guardian.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.api_guardian.props",
+      "PackagePath": "buildTransitive\\api_guardian.props"
     }
   ],
   "ElementsToRemove": []

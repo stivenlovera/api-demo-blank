@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace api_guardian.Entities;
 
-public partial class Administracionempresa
+public partial class AdministracionEmpresa
 {
     public string Susuarioadd { get; set; }
 

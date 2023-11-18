@@ -39,6 +39,7 @@ namespace DocumentoVentaSion.Utils
                 Orientation = Orientation.Portrait,
                 PaperSize = PaperKind.A4,
                 Margins = new MarginSettings { Top = 17, Bottom = 20, Left = 10, Right = 10 },
+
             };
 
             var objectSettings = new ObjectSettings
@@ -46,14 +47,16 @@ namespace DocumentoVentaSion.Utils
                 PagesCount = true,
                 HtmlContent = htmlContent,
                 WebSettings = { DefaultEncoding = "utf-8" },
-                HeaderSettings = { FontName = "Sans-Serif", FontSize = 9, Line = false, HtmUrl = header, Spacing = 17 },
-                FooterSettings = { FontSize = 8, Center = "Página [page] de [toPage]", Line = false, Spacing = 5, Right = codigoFooter },
+                HeaderSettings = { FontName = "Calibri", FontSize = 9, Line = false, HtmUrl = header, Spacing = 17 },
+                FooterSettings = { FontSize = 8, Center = "Página [page] de [toPage]", Line = false, Spacing = 5, Right = codigoFooter, FontName = "Calibri" },
+                
             };
 
             var htmlToPdfDocument = new HtmlToPdfDocument()
             {
                 GlobalSettings = globalSettings,
                 Objects = { objectSettings },
+
             };
             return _converter.Convert(htmlToPdfDocument);
         }
