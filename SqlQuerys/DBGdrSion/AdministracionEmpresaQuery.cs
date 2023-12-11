@@ -68,7 +68,7 @@ namespace api_guardian.SqlQuerys.DBGdrSion
                 `fecha_creacion`,
                 `empresa`
             FROM `administracionempresa`
-            WHERE  lempresa_id = @lempresaId; 
+            WHERE  lempresa_id = @LEmpresaId; 
             ";
         }
         public static string Update()

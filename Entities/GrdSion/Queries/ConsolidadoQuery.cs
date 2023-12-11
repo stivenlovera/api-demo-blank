@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace api_guardian.Entities.GrdSion.Queries
 {
@@ -11,7 +12,7 @@ namespace api_guardian.Entities.GrdSion.Queries
         public int Scodigo { get; set; }
         public string Scedulaidentidad { get; set; }
         public string Snombrecompleto { get; set; }
-        public int Lempresa_id { get; set; }
+        public int LempresaId { get; set; }
         public string Empresa { get; set; }
         public decimal TotalComisionVtaGrupoResidual { get; set; }
         public decimal TotalComisionVtaPersonal { get; set; }
@@ -25,6 +26,7 @@ namespace api_guardian.Entities.GrdSion.Queries
         public DateTime FechaFinCiclo { get; set; }
         public decimal Retencion { get; set; }
         public decimal TotalComision { get; set; }
+        public decimal TotalComisionServicio { get; set; }
         public decimal TotalComisionRetencion { get; set; }
         public decimal TotalPagar { get; set; }
         public decimal Valor13 { get; set; }

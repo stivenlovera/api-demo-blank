@@ -1,5 +1,6 @@
 using System.Text;
 using api_guardian.Contexts;
+using api_guardian.Entities.GrdSion;
 using api_guardian.Helpers;
 using api_guardian.Module;
 using api_guardian.Module.ConsolidadosModule;
@@ -174,7 +175,6 @@ namespace api_guardian
         {
             //CONSOLIDADOS
             services.AddTransient<ConsolidadoModule>();
-            services.AddTransient<ConsolidadosReportsModule>();
             services.AddTransient<JobModule>();
             services.AddTransient<JobTimeModulo>();
             services.AddTransient<FuncionarioModule>();
@@ -188,7 +188,10 @@ namespace api_guardian
             services.AddTransient<CicloModule>();
             services.AddTransient<ProyeccionModule>();
             services.AddTransient<AdministracionEmpresaModule>();
-            
+            services.AddTransient<EstadoReporteModule>();
+            services.AddTransient<PagoConsolidadoModule>();
+            services.AddTransient<GenerarConsolidadoModule>();
+            services.AddTransient<PagoConsolidadoModule>();
         }
         private static void ServicesRespositories(IServiceCollection services)
         {
@@ -212,6 +215,11 @@ namespace api_guardian
             services.AddTransient<InCoutaRespository>();
             services.AddTransient<AdministracionEmpresaRepository>();
             services.AddTransient<ConsolidadoRepository>();
+            services.AddTransient<HistorialConsolidadoRepository>();
+            services.AddTransient<EstadoReporteRepository>();
+            services.AddTransient<PagoComisionesRepository>();
+            services.AddTransient<HistorialPagoComisionesRepository>();
+            services.AddTransient<ConfigCambioEmpresaRepository>();
         }
         private static void ServicesSql(IServiceCollection services)
         {

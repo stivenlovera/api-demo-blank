@@ -21,6 +21,7 @@ namespace api_guardian.SqlQuerys.GrdSion
                 , ciclo.dtfechafin as fecha_fin_ciclo
                 , tblr.porcentajeret as retencion
                 , tblr.montocomision as total_comision
+                , tblr.montocomision as total_comision_servicio
                 , tblr.montoretencion as total_comision_retencion
                 , tblr.total_comision as total_pagar
                 , if(tblr.porcentajeret = 0, 
@@ -152,7 +153,7 @@ namespace api_guardian.SqlQuerys.GrdSion
             inner join administracioncontacto contacto on dat.lcontacto_id = contacto.lcontacto_id
             group by dat.lcontacto_id, dat.lempresa_id)dat
             left outer join (
-                select lcontacto_id from administracionventapersonal where lciclo_id = 109 group by lcontacto_id
+                select lcontacto_id from administracionventapersonal where lciclo_id = @cicloId group by lcontacto_id
             )datVtaPersonal on dat.lcontacto_id = datVtaPersonal.lcontacto_id
             inner join administracionempresa empresa on empresa.lempresa_id = dat.lempresa_id
             inner join administracionciclo ciclo on ciclo.lciclo_id = dat.lciclo_id 

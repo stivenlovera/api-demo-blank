@@ -34,11 +34,11 @@ namespace api_guardian.Repository.BDGrdSion
             var modulos = await connection.QueryAsync<AdministracionEmpresa>(query);
             return modulos.ToList();
         }
-        public async Task<AdministracionEmpresa> GetOne(int lcicloId)
+        public async Task<AdministracionEmpresa> GetOne(int LEmpresaId)
         {
-            this.logger.LogInformation("AdministracionEmpresaRepository/GetOne({lcicloId})", lcicloId);
+            this.logger.LogInformation("AdministracionEmpresaRepository/GetOne({LEmpresaId})", LEmpresaId);
             var query = AdministracionEmpresaQuery.Edit();
-            var validate = await connection.QueryAsync<AdministracionEmpresa>(query, new { lcicloId });
+            var validate = await connection.QueryAsync<AdministracionEmpresa>(query, new { LEmpresaId });
             this.logger.LogInformation("Login {query}", validate);
             if (validate.FirstOrDefault() != null)
             {

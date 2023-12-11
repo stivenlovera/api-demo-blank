@@ -14,7 +14,6 @@ namespace api_guardian.Controllers
     {
         private readonly ILogger<CargoController> logger;
 
-
         public CargoController(
             ILogger<CargoController> logger
         )

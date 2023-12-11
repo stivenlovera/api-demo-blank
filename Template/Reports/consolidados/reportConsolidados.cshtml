@@ -9,6 +9,26 @@
     var año = DateTime.Now.ToString("yyyy", new CultureInfo("es-ES"));
     //firma vendedor
     var empresas = String.Join(", ", Model.Filtro.Empresas.Select(x => x.Snombre)).ToString();
+    decimal totalComision = 0;
+    decimal servicio = 0;
+    decimal totalComisiones = 0;
+    decimal porcentaje13 = 0;
+    decimal porcentaje87 = 0;
+    decimal totalRetencion = 0;
+    decimal total = 0;
+    decimal totaPagar = 0;
+
+    foreach (var data in Model.DataTable)
+    {
+        totalComision += data.TotalComisionVtaPersonal;
+        servicio += data.TotalComisionVtaGrupoResidual;
+        totalComisiones += data.TotalComision;
+        porcentaje13 += data.Valor13;
+        porcentaje87 += data.Valor87;
+        totalRetencion += data.TotalComisionRetencion;
+        total += data.TotalComision;
+        totaPagar += data.TotalPagar;
+    }
 }
 
 <!DOCTYPE html>
@@ -63,7 +83,7 @@
 
         body {
             font-family: 'Calibri';
-            font-size: 12px;
+            font-size: 11px;
             text-rendering: geometricPrecision;
             margin-top: 20px;
         }
@@ -137,6 +157,9 @@
                     Servicio $US
                 </th>
                 <th>
+                    Total comisiones $us
+                </th>
+                <th>
                     13 %
                 </th>
                 <th>
@@ -170,31 +193,72 @@
                         @data.Snombrecompleto
                     </td>
                     <td class="text-center">
-                        @data.TotalComisionVtaPersonal
+                        @data.TotalComisionVtaPersonal.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.TotalComisionVtaGrupoResidual
+                        @data.TotalComisionVtaGrupoResidual.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.Valor13
+                        @data.TotalComision.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.Valor87
+                        @data.Valor13.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.Retencion
+                        @data.Valor87.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.TotalComisionRetencion
+                        @data.Retencion.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.TotalComision
+                        @data.TotalComisionRetencion.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                     <td class="text-center">
-                        @data.TotalPagar
+                        @data.TotalComision.ToString("0,0.00", CultureInfo.InvariantCulture)
+                    </td>
+                    <td class="text-center">
+                        @data.TotalPagar.ToString("0,0.00", CultureInfo.InvariantCulture)
                     </td>
                 </tr>
             }
+            <tr style="background-color: rgb(198, 255, 196)), 69, 69);">
+                <td class="text-center" bgcolor="#FDFFEB">
+                    Totales
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+
+                </td>
+                <td class="text-left" bgcolor="#FDFFEB">
+
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @totalComision.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @servicio.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @totalComisiones.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @porcentaje13.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @porcentaje87.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @totalRetencion.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @total.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+                <td class="text-center" bgcolor="#FDFFEB">
+                    @totaPagar.ToString("0,0.00", CultureInfo.InvariantCulture)
+                </td>
+            </tr>
         </tbody>
     </table>
 </body>

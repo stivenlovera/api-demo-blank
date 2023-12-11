@@ -1,12 +1,22 @@
+using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 
 using api_guardian;
 using Serilog;
+//configuracion decimal come per point
+var cultureInfo = new CultureInfo("es-MX");
+cultureInfo.NumberFormat.CurrencySymbol = "€";
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 var builder = WebApplication.CreateBuilder(args);
+
 //JWT HABILITADO
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
 //lOG DE CONFIGURACION
 builder.Host.UseSerilog();
+
 //CREATE LOGS
 Guid id = Guid.NewGuid();
 Log.Logger = new LoggerConfiguration()
@@ -18,7 +28,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 // Add services to the container.
 var startup = new Startup(builder.Configuration);
-startup.ConfigureServices(builder.Services); 
+startup.ConfigureServices(builder.Services);
 // calling ConfigureServices method
 var app = builder.Build();
 startup.Configure(app, app.Environment);
