@@ -7,10 +7,10 @@ namespace api_guardian.Entities.GrdSion
 {
     public class AdministracionNivel
     {
-        public int Susuarioadd { get; set; }
-        public int Dtfechaadd { get; set; }
+        public string Susuarioadd { get; set; }
+        public DateTime Dtfechaadd { get; set; }
         public string Susuariomod { get; set; }
-        public int Dtfechamod { get; set; }
+        public DateTime Dtfechamod { get; set; }
         public int LnivelId { get; set; }
         public string Ssigla { get; set; }
         public string Snombre { get; set; }

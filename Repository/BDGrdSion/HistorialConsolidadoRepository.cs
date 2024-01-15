@@ -28,11 +28,11 @@ namespace api_guardian.Repository.BDGrdSion
             this.logger = logger;
             this.connection = this.dBGrdSionContext.CreateConnection();
         }
-        public async Task<InsertGetId> InsertComision(string descripcion, string nombre, int EstadoReporteId, int ciclo_id)
+        public async Task<InsertGetId> InsertComision(string descripcion, string nombre, int EstadoReporteId, int CicloId)
         {
-            this.logger.LogInformation("HistorialConsolidadoRepository/InsertComision({descripcion},{nombre},{estadoReporte},{ciclo_id})", descripcion, nombre, EstadoReporteId, ciclo_id);
+            this.logger.LogInformation("HistorialConsolidadoRepository/InsertComision({descripcion},{nombre},{estadoReporte},{ciclo_id})", descripcion, nombre, EstadoReporteId, CicloId);
             var query = HistorialConsolidadoSql.InsertComisiones();
-            var consolidado = await connection.QueryAsync<InsertGetId>(query, new { descripcion, nombre, EstadoReporteId, ciclo_id });
+            var consolidado = await connection.QueryAsync<InsertGetId>(query, new { descripcion, nombre, EstadoReporteId, CicloId });
             return consolidado.FirstOrDefault();
         }
         public async Task<HistorialComisionConsolidado> GetVerificar(int cicloId)
@@ -82,7 +82,6 @@ namespace api_guardian.Repository.BDGrdSion
             }
             else
             {
-
                 throw new Exception("Ocurrio un error al inserta historial");
             }
         }

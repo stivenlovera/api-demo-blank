@@ -138,18 +138,18 @@ namespace api_guardian.Controllers
         }
         //REPORTE EXPORT
         [HttpPost("export-pdf")]
-        public FileStreamResult ExportPdf([FromBody] ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
+        public async Task<FileStreamResult> ExportPdf([FromBody] ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
         {
             this._logger.LogInformation("{methodo}{path} ExportPdf({reqConsolidadoDto}) Inizialize ...", Request.Method, Request.Path, Helper.Log(reqExportHistorialComisionesDto));
-            var resultado = this.consolidadoModule.ExportPdfPlantilla(reqExportHistorialComisionesDto);
+            var resultado = await this.consolidadoModule.ExportPdfPlantilla(reqExportHistorialComisionesDto);
             return resultado;
         }
 
         [HttpPost("export-excel")]
-        public FileResult ExportExcel([FromBody] ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
+        public async Task<FileResult> ExportExcel([FromBody] ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
         {
             this._logger.LogInformation("{methodo}{path} ExportExcel({reqConsolidadoDto}) Inizialize ...", Request.Method, Request.Path, Helper.Log(reqExportHistorialComisionesDto));
-            var resultado = this.consolidadoModule.ExportExcelPlantilla(reqExportHistorialComisionesDto);
+            var resultado = await this.consolidadoModule.ExportExcelPlantilla(reqExportHistorialComisionesDto);
             return File(resultado, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "users.xlsx");
         }
     }

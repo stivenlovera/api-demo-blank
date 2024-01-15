@@ -1,6 +1,6 @@
 @using System.Globalization;
 @using Microsoft.AspNetCore.Hosting;
-@model api_guardian.Dtos.Controllers.ReqConsolidadoDto;
+@model api_guardian.Dtos.Module.ExportHistorialComisiones;
 @inject IWebHostEnvironment _webHostEnvironment;
 @{
     //fecha actual del sistema
@@ -8,7 +8,6 @@
     var mes = DateTime.Now.ToString("MMMM", new CultureInfo("es-ES"));
     var año = DateTime.Now.ToString("yyyy", new CultureInfo("es-ES"));
     //firma vendedor
-    var empresas = String.Join(", ", Model.Filtro.Empresas.Select(x => x.Snombre)).ToString();
     decimal totalComision = 0;
     decimal servicio = 0;
     decimal totalComisiones = 0;
@@ -18,7 +17,7 @@
     decimal total = 0;
     decimal totaPagar = 0;
 
-    foreach (var data in Model.DataTable)
+    foreach (var data in Model.historialComisionConsolidados)
     {
         totalComision += data.TotalComisionVtaPersonal;
         servicio += data.TotalComisionVtaGrupoResidual;
@@ -110,7 +109,7 @@
 <body>
     <h4 class="centrado titulo">
         <strong>
-            Reporte Consolidado comision - servicio
+            @Model.Nombre
         </strong>
     </h4>
     <br>
@@ -121,18 +120,18 @@
                     <strong>Nit:</strong>
                 </td>
                 <td width="35%" class="asc" colspan="3">
-                    <strong>Empresa:</strong> @empresas
+                    <strong>Empresa:</strong> @Model.Empresas
                 </td>
             </tr>
             <tr>
                 <td width="35%" class="asc" colspan="3">
-                    <strong>Ciclo:</strong> @Model.Filtro.Ciclo.snombre
+                    <strong>Ciclo:</strong> @Model.NombreCiclo
                 </td>
                 <td width="35%" class="asc">
-                    <strong>Fecha inicio:</strong> @Model.Filtro.Ciclo.dtfechainicio.ToString("dd/MM/yyyy")
+                    <strong>Fecha inicio:</strong> @Model.FechaInicioCiclo.ToString("dd/MM/yyyy")
                 </td>
                 <td width="35%" class="asc">
-                    <strong>Fecha fin:</strong> @Model.Filtro.Ciclo.dtfechafin.ToString("dd/MM/yyyy")
+                    <strong>Fecha fin:</strong> @Model.FechaFinCiclo.ToString("dd/MM/yyyy")
                 </td>
             </tr>
         </tbody>
@@ -180,7 +179,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var data in Model.DataTable)
+            @foreach (var data in Model.historialComisionConsolidados)
             {
                 <tr>
                     <td class="text-center">

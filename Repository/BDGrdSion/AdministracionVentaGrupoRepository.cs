@@ -1,23 +1,18 @@
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using api_guardian.Contexts;
 using api_guardian.Entities.GrdSion;
-using api_guardian.Entities.GrdSion.Queries;
 using api_guardian.SqlQuerys.GrdSion;
 using api_guardian.Utils;
 using Dapper;
 
 namespace api_guardian.Repository.BDGrdSion
 {
-    public class ConsolidadoRepository
+    public class AdministracionVentaGrupoRepository
     {
         private readonly DBGrdSionContext dBGrdSionContext;
         private readonly ILogger<AdministracionEmpresaRepository> logger;
         private readonly IDbConnection connection;
-        public ConsolidadoRepository(
+        public AdministracionVentaGrupoRepository(
             DBGrdSionContext dBGrdSionContext,
             ILogger<AdministracionEmpresaRepository> logger
         )
@@ -27,11 +22,11 @@ namespace api_guardian.Repository.BDGrdSion
             this.connection = this.dBGrdSionContext.CreateConnection();
 
         }
-        public async Task<List<ConsolidadoQuery>> GetAll(int cicloId, List<int> empresaId)
+        public async Task<List<AdministracionVentaGrupo>> GetAll(int cicloId, List<int> empresaId)
         {
             this.logger.LogInformation("AdministracionEmpresaRepository/GetAll({cicloId},{empresaId})", cicloId, Helper.Log(empresaId));
-            var query = ConsolidadoSql.ObtenerConsolidado();
-            var consolidado = await connection.QueryAsync<ConsolidadoQuery>(query, new { cicloId, empresaId });
+            var query = AdministracionVentaGrupoSql.ObteneTodo();
+            var consolidado = await connection.QueryAsync<AdministracionVentaGrupo>(query, new { cicloId, empresaId });
 
             return consolidado.ToList();
         }

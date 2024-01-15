@@ -92,7 +92,8 @@ namespace api_guardian.SqlQuerys.GrdSion
                 total_comision_retencion,
                 total_pagar,
                 valor_13,
-                valor_87
+                valor_87,
+                total_comision as total_comision_servicio
             FROM
                 historial_pago_comision_consolidado
             where pago_consolidado_id=@PagoConsolidadoId;

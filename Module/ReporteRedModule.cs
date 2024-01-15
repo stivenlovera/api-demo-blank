@@ -15,8 +15,6 @@ namespace api_guardian.Module
     {
         private readonly ILogger<ReporteRedModule> logger;
         private readonly ReporteRedRepository reporteRedRepository;
-        private readonly AdministracionContactoRepository administracionContactoRepository;
-        private readonly AdministracionCicloRepository administracionCicloRepository;
         private readonly GeneratePdf generatePdf;
         private readonly GetTemplate getTemplate;
         private readonly Converters converters;
@@ -24,8 +22,6 @@ namespace api_guardian.Module
         public ReporteRedModule(
             ILogger<ReporteRedModule> logger,
             ReporteRedRepository reporteRedRepository,
-            AdministracionContactoRepository administracionContactoRepository,
-            AdministracionCicloRepository administracionCicloRepository,
             GeneratePdf generatePdf,
             GetTemplate getTemplate,
             Converters converters
@@ -33,8 +29,6 @@ namespace api_guardian.Module
         {
             this.logger = logger;
             this.reporteRedRepository = reporteRedRepository;
-            this.administracionContactoRepository = administracionContactoRepository;
-            this.administracionCicloRepository = administracionCicloRepository;
             this.generatePdf = generatePdf;
             this.getTemplate = getTemplate;
             this.converters = converters;
@@ -71,9 +65,8 @@ namespace api_guardian.Module
                 return listRedes;
             }
         }
-        public async Task<FileStreamResult> ViewReportRedesActivas(ReqPreviewReporteRedDto reqPreviewReporteRedDto)
+        /* public async Task<FileStreamResult> ViewReportRedesActivas(ReqPreviewReporteRedDto reqPreviewReporteRedDto)
         {
-            var ciclo = await administracionCicloRepository.GetAll();
             var rows = reqPreviewReporteRedDto.Rows;
 
             var data = new ReporteRedActivas()
@@ -89,6 +82,6 @@ namespace api_guardian.Module
             var htmlContent = this.getTemplate.SearchTemplate("redesActivas", data);
             var pdf = this.generatePdf.Generate(htmlContent, "xxxx-xxxx-xxxx", true);
             return converters.ConverterToPdf(pdf, "demo");
-        }
+        } */
     }
 }

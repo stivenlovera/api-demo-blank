@@ -24,7 +24,7 @@ namespace api_guardian.Dtos.Controllers
     }
     public class ReqGenerarConsolidadoDto
     {
-        public int Ciclo_id { get; set; }
+        public int CicloId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public EstadoReporte EstadoReporte { get; set; }

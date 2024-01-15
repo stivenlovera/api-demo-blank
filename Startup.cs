@@ -182,7 +182,6 @@ namespace api_guardian
             services.AddTransient<RolModule>();
             services.AddTransient<RolFuncionarioModule>();
             services.AddTransient<ReporteRedModule>();
-            services.AddTransient<AdministracionCicloModule>();
             services.AddTransient<ModuloModule>();
             services.AddTransient<AuthenticateModule>();
             services.AddTransient<CicloModule>();
@@ -192,6 +191,9 @@ namespace api_guardian
             services.AddTransient<PagoConsolidadoModule>();
             services.AddTransient<GenerarConsolidadoModule>();
             services.AddTransient<PagoConsolidadoModule>();
+            services.AddTransient<AdministracionContactoModule>();
+            services.AddTransient<PaisModule>();
+            services.AddTransient<AdministracionNivelModule>();
         }
         private static void ServicesRespositories(IServiceCollection services)
         {
@@ -203,8 +205,6 @@ namespace api_guardian
             services.AddTransient<RolRepository>();
             services.AddTransient<RolFuncionarioRepository>();
             services.AddTransient<ReporteRedRepository>();
-            services.AddTransient<AdministracionContactoRepository>();
-            services.AddTransient<AdministracionCicloRepository>();
             services.AddTransient<ModuloRespository>();
             services.AddTransient<RolModuloRepository>();
             services.AddTransient<RolSubModuloRepository>();
@@ -220,6 +220,9 @@ namespace api_guardian
             services.AddTransient<PagoComisionesRepository>();
             services.AddTransient<HistorialPagoComisionesRepository>();
             services.AddTransient<ConfigCambioEmpresaRepository>();
+            services.AddTransient<AdministracionContactoRepository>();
+            services.AddTransient<BasePaisRepository>();
+            services.AddTransient<AdministracionNiveRepository>();
         }
         private static void ServicesSql(IServiceCollection services)
         {

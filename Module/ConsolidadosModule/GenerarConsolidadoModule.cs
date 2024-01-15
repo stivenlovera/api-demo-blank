@@ -165,7 +165,7 @@ namespace api_guardian.Module.ConsolidadosModule
         public async Task<string> StoreConsolidado(ReqGenerarConsolidadoDto reqGenerarConsolidadoDto)
         {
             this.logger.LogInformation("ConsolidadosReportsModule/StoreConsolidado ({reqGenerarConsolidadoDto})", Helper.Log(reqGenerarConsolidadoDto));
-            var insertComision = await historialConsolidadoRepository.InsertComision(reqGenerarConsolidadoDto.Descripcion, reqGenerarConsolidadoDto.Nombre, Convert.ToInt32(reqGenerarConsolidadoDto.EstadoReporte.EstadoReporteId), reqGenerarConsolidadoDto.Ciclo_id);
+            var insertComision = await historialConsolidadoRepository.InsertComision(reqGenerarConsolidadoDto.Descripcion, reqGenerarConsolidadoDto.Nombre, Convert.ToInt32(reqGenerarConsolidadoDto.EstadoReporte.EstadoReporteId), reqGenerarConsolidadoDto.CicloId);
             var insertHistorial = await historialConsolidadoRepository.InsertHistorialConsolidado(insertComision.Id, reqGenerarConsolidadoDto.DataTable);
             this.logger.LogInformation("ConsolidadosReportsModule/StoreConsolidado SUCCESS => {insertHistorial} columnas afectadas", insertHistorial);
             return "Consolidado Guardado correctamente";

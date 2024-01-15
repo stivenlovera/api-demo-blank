@@ -21,7 +21,6 @@ namespace api_guardian.Contexts
             ChangeTracker.LazyLoadingEnabled = false;
         }
         public virtual DbSet<AdministracionEmpresa> Administracionempresas { get; set; }
-        public virtual DbSet<AdministracionContacto> AdministracionContacto { get; set; }
         public virtual DbSet<ObtenerConsolidadoView> ObtenerConsolidadoViews { get; set; }
         public virtual DbSet<ObtenerResultadorRedQuery> ObtenerResultadorRedQuery { get; set; }
         public virtual DbSet<AdministracionCiclo> AdministracionCiclo { get; set; }

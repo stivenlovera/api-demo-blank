@@ -1,9 +1,11 @@
 using api_guardian.Dtos.Controllers;
+using api_guardian.Dtos.Module;
 using api_guardian.Dtos.Response;
 using api_guardian.Entities;
 using api_guardian.Entities.GrdSion;
 using api_guardian.Entities.GrdSion.Queries;
 using api_guardian.Helpers;
+using api_guardian.Repository;
 using api_guardian.Repository.BDGrdSion;
 using api_guardian.Utils;
 using ClosedXML.Excel;
@@ -27,6 +29,7 @@ namespace api_guardian.Module.ConsolidadosModule
         private readonly PagoComisionesRepository pagoComisionesRepository;
         private readonly HistorialPagoComisionesRepository historialPagoComisionesRepository;
         private readonly ConfigCambioEmpresaRepository configCambioEmpresaRepository;
+        private readonly CicloRepository cicloRepository;
 
         public ConsolidadoModule(
             ILogger<ConsolidadoModule> logger,
@@ -39,39 +42,52 @@ namespace api_guardian.Module.ConsolidadosModule
             Converters converters,
             PagoComisionesRepository PagoComisionesRepository,
             HistorialPagoComisionesRepository historialPagoComisionesRepository,
-            ConfigCambioEmpresaRepository configCambioEmpresaRepository
+            ConfigCambioEmpresaRepository configCambioEmpresaRepository,
+            CicloRepository cicloRepository
         )
         {
             this._logger = logger;
-            consolidadoRepository = ConsolidadoRepository;
+            this.consolidadoRepository = ConsolidadoRepository;
             this.webHostEnvironment = webHostEnvironment;
             this.historialConsolidadoRepository = historialConsolidadoRepository;
             this.administracionEmpresaRepository = administracionEmpresaRepository;
             this.getTemplate = getTemplate;
             this.generatePdf = generatePdf;
             this.converters = converters;
-            pagoComisionesRepository = PagoComisionesRepository;
+            this.pagoComisionesRepository = PagoComisionesRepository;
             this.historialPagoComisionesRepository = historialPagoComisionesRepository;
             this.configCambioEmpresaRepository = configCambioEmpresaRepository;
+            this.cicloRepository = cicloRepository;
         }
-        public byte[] ExportExcelPlantilla(ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
+        public async Task<byte[]> ExportExcelPlantilla(ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
         {
-            this._logger.LogInformation("ubicacion de plantilla excel {path}", Helper.Log(reqExportHistorialComisionesDto));
+            this._logger.LogInformation("ExportExcelPlantilla({reqExportHistorialComisionesDto})", Helper.Log(reqExportHistorialComisionesDto));
             //OBTENER plantilla
             var path = System.IO.Path.Combine(webHostEnvironment.WebRootPath, "template", "consolidado", "template_consolidado.xlsx");
-            this._logger.LogWarning("ubicacion de plantilla excel {path}", path);
             //Modificacion de plantilla
             XLWorkbook workbook = new XLWorkbook(path);
             var hoja = workbook.Worksheets.Worksheet(1);
+            var ciclo = await this.cicloRepository.GetOne(reqExportHistorialComisionesDto.Consolidado.CicloId);
             //ciclo
-            hoja.Cell(4, 2).SetValue(Helper.MayusMinus(reqExportHistorialComisionesDto.Consolidado.Ciclo_id.toString()));
+            hoja.Cell(1, 4).SetValue(Helper.MayusMinus(reqExportHistorialComisionesDto.Consolidado.Nombre));
+            //ciclo
+            hoja.Cell(4, 2).SetValue(Helper.MayusMinus(ciclo.snombre));
             //fecha inicio
-            hoja.Cell(4, 5).SetValue(Helper.MayusMinus(""));
+            hoja.Cell(4, 5).SetValue(Helper.MayusMinus(ciclo.dtfechainicio.ToString("dd/MM/yyyy")));
             //fecha fin
-            hoja.Cell(4, 9).SetValue(Helper.MayusMinus(""));
+            hoja.Cell(4, 10).SetValue(Helper.MayusMinus(ciclo.dtfechafin.ToString("dd/MM/yyyy")));
             //lista empresas
-            var listaEmpressas = reqExportHistorialComisionesDto.DataTable;
-            this._logger.LogWarning("cantidad de empresas {listaEmpressas}", Helper.Log(listaEmpressas));
+            var listaEmpressas = reqExportHistorialComisionesDto.DataTable.GroupBy(x => x.LempresaId).Select(x => x).ToList();
+            var empresas = new List<string>();
+            foreach (var empresa in listaEmpressas)
+            {
+                foreach (var item in empresa)
+                {
+                    empresas.Add(item.Empresa);
+                    break;
+                }
+            }
+
             //totales
             decimal totalComision = 0;
             decimal servicio = 0;
@@ -83,7 +99,7 @@ namespace api_guardian.Module.ConsolidadosModule
             decimal totaPagar = 0;
 
             /* var stringListaEmpressas = System.String.Join(", ", listaEmpressas.ToArray()); */
-            hoja.Cell(3, 5).SetValue(Helper.MayusMinus("stringListaEmpressas"));
+            hoja.Cell(3, 5).SetValue(Helper.MayusMinus(empresas.toString()));
             var row = 7;
             var ultimaLinea = reqExportHistorialComisionesDto.DataTable.Count() + row;
             foreach (var data in reqExportHistorialComisionesDto.DataTable)
@@ -132,13 +148,34 @@ namespace api_guardian.Module.ConsolidadosModule
             var content = stream.ToArray();
             return content;
         }
-        public FileStreamResult ExportPdfPlantilla(ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
+
+        public async Task<FileStreamResult> ExportPdfPlantilla(ReqExportHistorialComisionesDto reqExportHistorialComisionesDto)
         {
             this._logger.LogInformation("ExportPdfPlantilla ({reqConsolidadoDto})", Helper.Log(reqExportHistorialComisionesDto));
-            var htmlContent = this.getTemplate.SearchTemplate("consolidado", reqExportHistorialComisionesDto);
-
+            var ciclo = await this.cicloRepository.GetOne(reqExportHistorialComisionesDto.Consolidado.CicloId);
+            var listaEmpressas = reqExportHistorialComisionesDto.DataTable.GroupBy(x => x.LempresaId).Select(x => x).ToList();
+            var empresas = new List<string>();
+            foreach (var empresa in listaEmpressas)
+            {
+                foreach (var item in empresa)
+                {
+                    empresas.Add(item.Empresa);
+                    break;
+                }
+            }
+            var model = new ExportHistorialComisiones()
+            {
+                Empresas = empresas.toString(),
+                FechaFinCiclo = ciclo.dtfechafin,
+                FechaInicioCiclo = ciclo.dtfechainicio,
+                historialComisionConsolidados = reqExportHistorialComisionesDto.DataTable,
+                Nit = "",
+                Nombre = reqExportHistorialComisionesDto.Consolidado.Nombre,
+                NombreCiclo = ciclo.snombre
+            };
+            var htmlContent = this.getTemplate.SearchTemplate("comisionConsolidado", model);
             var pdf = this.generatePdf.Generate(htmlContent, "");
-            return this.converters.ConverterToPdf(pdf, "Reporte consolidado comsion servicio");
+            return this.converters.ConverterToPdf(pdf, $"Reporte {reqExportHistorialComisionesDto.Consolidado.Nombre}");
         }
         /*HISTORIAL CONSOLIDAD*/
         public async Task<List<ComisionConsolidado>> GetConsolidadosHistoricos()

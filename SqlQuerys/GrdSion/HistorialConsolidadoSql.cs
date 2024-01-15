@@ -29,7 +29,7 @@ namespace api_guardian.SqlQuerys.GrdSion
                     @Descripcion,
                     NOW(),
                     @EstadoReporteId,
-                    @ciclo_id
+                    @CicloId
                 );
             SELECT LAST_INSERT_ID() as id;
             ";
@@ -213,7 +213,8 @@ namespace api_guardian.SqlQuerys.GrdSion
         public static string ObtenerHistoricoConsolidado()
         {
             return @$"
-                SELECT *
+                SELECT historial_comision_consolidado.*,
+                historial_comision_consolidado.total_comision as total_comision_servicio
                 FROM
                     historial_comision_consolidado
                 WHERE

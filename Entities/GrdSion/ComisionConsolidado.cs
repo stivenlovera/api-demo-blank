@@ -12,6 +12,6 @@ namespace api_guardian.Entities.GrdSion
         public string Nombre { get; set; }
         public DateTime FechaCreacion { get; set; }
         public int EstadoReporteId { get; set; }
-        public int Ciclo_id { get; set; }
+        public int CicloId { get; set; }
     }
 }

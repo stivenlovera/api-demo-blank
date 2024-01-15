@@ -88,18 +88,18 @@ namespace api_guardian.Controllers
         }
 
         [HttpPost("export-pdf")]
-        public FileStreamResult ExportPdf([FromBody] ReqExportHistorialPagoComisionesDto reqExportHistorialPagoComisionesDto)
+        public async Task<FileStreamResult> ExportPdf([FromBody] ReqExportHistorialPagoComisionesDto reqExportHistorialPagoComisionesDto)
         {
             this.logger.LogInformation("{methodo}{path} ExportPdf({reqConsolidadoDto}) Inizialize ...", Request.Method, Request.Path, Helper.Log(reqExportHistorialPagoComisionesDto));
-            var resultado = this.pagoConsolidadoModule.ExportPdfPlantilla(reqExportHistorialPagoComisionesDto);
+            var resultado = await this.pagoConsolidadoModule.ExportPdfPlantilla(reqExportHistorialPagoComisionesDto);
             return resultado;
         }
 
         [HttpPost("export-excel")]
-        public FileResult ExportExcel([FromBody] ReqExportHistorialPagoComisionesDto reqExportHistorialPagoComisionesDto)
+        public async Task<FileResult> ExportExcel([FromBody] ReqExportHistorialPagoComisionesDto reqExportHistorialPagoComisionesDto)
         {
             this.logger.LogInformation("{methodo}{path} ExportExcel({reqConsolidadoDto}) Inizialize ...", Request.Method, Request.Path, Helper.Log(reqExportHistorialPagoComisionesDto));
-            var resultado = this.pagoConsolidadoModule.ExportExcelPlantilla(reqExportHistorialPagoComisionesDto);
+            var resultado = await this.pagoConsolidadoModule.ExportExcelPlantilla(reqExportHistorialPagoComisionesDto);
             return File(resultado, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "users.xlsx");
         }
     }

@@ -60,11 +60,5 @@ public class ReporteRedController : ControllerBase
 
         }
     }
-    [HttpPost("report-activas")]
-    public async Task<FileStreamResult> ViewReportRedesActivas(
-        [FromBody] ReqPreviewReporteRedDto reqPreviewReporteRedDto
-    )
-    {
-        return await this.reporteRedModule.ViewReportRedesActivas(reqPreviewReporteRedDto);
-    }
+    
 }
